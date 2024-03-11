@@ -733,7 +733,7 @@ class LineChartPainter extends AxisChartPainter<LineChartData> {
               getPixelX(barData.mostLeftSpot.x, viewSize, holder),
               getPixelY(barData.mostTopSpot.y, viewSize, holder),
               getPixelX(barData.mostRightSpot.x, viewSize, holder),
-              getPixelY(barData.belowBarData.cutOffY, viewSize, holder),
+              getPixelY(barData.cutOffY, viewSize, holder),
             )),
           _clearBarAreaPaint)
       ..restore();
@@ -773,7 +773,7 @@ class LineChartPainter extends AxisChartPainter<LineChartData> {
         Path()
           ..addRect(Rect.fromLTRB(
             getPixelX(barData.mostLeftSpot.x, viewSize, holder),
-            getPixelY(barData.belowBarData.cutOffY, viewSize, holder),
+            getPixelY(barData.cutOffY, viewSize, holder),
             getPixelX(barData.mostRightSpot.x, viewSize, holder),
             getPixelY(barData.mostBottomSpot.y, viewSize, holder),
           )),
